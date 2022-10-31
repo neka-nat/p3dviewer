@@ -11,36 +11,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
-.App {
-  display: flex;
-  flex-direction: column;
-  margin-top: 40px;
-  align-items: center;
-}
-
-.drop-zone {
-  width: 800px;
-  height: 160px;
-  border: 4px dashed #AAAAAA;
-  background: #CCCCCC;
-  text-align: center;
-  line-height: 130px;
-  color: #FFFFFF;
-  font-weight: bold;
-}
-
-.preview-container {
-  width: 800px;
-  height: 160px;
-  background: #eee;
-  border-radius: 8px;
-  margin-top: 40px;
-  display: flex;
-}
-
-img {
-  display: 'block';
-  width: 'auto';
-  height: 100%;
-}

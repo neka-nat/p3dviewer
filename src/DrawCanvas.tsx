@@ -3,14 +3,14 @@ import * as Fiber from '@react-three/fiber';
 import * as Drei from '@react-three/drei';
 import Model from "./Model";
 
-function DrawCanvas(url: any) {
+const DrawCanvas: React.FC = () => {
 
   return (
     <React.Suspense fallback={<span>loading...</span>}>
       <Fiber.Canvas>
         <Drei.PerspectiveCamera makeDefault />
         <Drei.OrbitControls makeDefault />
-        <Model url={url}/>
+          <Model />
       </Fiber.Canvas>
     </React.Suspense>
   );
