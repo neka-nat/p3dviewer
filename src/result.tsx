@@ -38,9 +38,9 @@ const Result = () => {
         { collapsed: true }
     )
 
-    // useEffect(() => {
-    //     setConfig({ verbose: animations })
-    // }, [animations, setConfig])
+    useEffect(() => {
+        setConfig({ verbose: animations })
+    }, [animations, setConfig])
 
     useEffect(() => {
         generateScene(config)
@@ -49,12 +49,11 @@ const Result = () => {
     return (
         <div>
             {!scene
-                ? (<p>Loading ...</p>) 
+                ? (<div className="loading"><p>Loading ...</p></div>) 
                 : (
                     <div>
                         <section >
-                            {/* {scene && <Viewer scene={scene} {...config} {...preview}/>} */}
-                            {scene && <Viewer scene={scene} />}
+                            {scene && <Viewer scene={scene} {...config} {...preview}/>}
                         </section>
                     </div>
                 )

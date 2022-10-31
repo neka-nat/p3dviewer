@@ -3,8 +3,6 @@ import Dropzone from './Dropzone';
 import useStore from './store'
 import loadable from '@loadable/component';
 
-const Loading = () => <p>Loading ...</p>
-
 const Result = loadable(() => import('./result'))
 
 function App() {
@@ -12,7 +10,7 @@ function App() {
     buffer: state.buffer,
   }))
 
-  const onDrop = useCallback((acceptedFiles) => {
+  const onDrop = useCallback((acceptedFiles: File[]) => {
     acceptedFiles.forEach((file: File) => {
       const reader = new FileReader()
       reader.onabort = () => console.error('file reading was aborted')

@@ -17,7 +17,6 @@ export default function Viewer({shadows, contactShadow, environment, preset, int
     }, [scene, shadows])
 
     return (
-        // <Canvas gl={{ preserveDrawingBuffer: true }} shadows dpr={[1, 1.5]} camera={{ position: [0, 0, 150], fov: 50 }}>
         <Canvas shadows dpr={[1, 1.5]} camera={{ position: [0, 0, 150], fov: 40 }}>
             <ambientLight intensity={0.25} />
             <Suspense fallback={null}>
