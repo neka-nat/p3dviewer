@@ -6,7 +6,7 @@ const useStore = create((set, get) => ({
     buffer: null,
     scene: null,
     animations: false,
-    generateScene: async (config: any) => {
+    generateScene: async () => {
         const { buffer, scene }: any = get()
         const result: any = await new Promise((resolve, reject) => gltfLoader.parse(buffer, '', resolve, reject))
         set({

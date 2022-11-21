@@ -3,6 +3,14 @@ import useStore from "./store"
 import Viewer from "./view"
 import { useControls } from 'leva'
 
+interface Props {
+    shadows: boolean | undefined,
+    contactShadow: false | { blur: number; opacity?: number | undefined; position?: [x: number, y: number, z: number] | undefined; } | undefined,
+    environment: "sunset" | "dawn" | "night" | "warehouse" | "forest" | "apartment" | "studio" | "city" | "park" | "lobby" | null | undefined,
+    preset:  "rembrandt" | "portrait" | "upfront" | "soft" | undefined,
+    intensity: number | undefined,
+}
+
 const Result = () => {
     const { scene, generateScene, animations }: any = useStore()
 

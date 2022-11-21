@@ -4,6 +4,14 @@ import { useRef } from "react";
 import { Suspense, useLayoutEffect } from "react";
 import useStore from "./store";
 
+interface Props {
+    shadows: boolean | undefined,
+    contactShadow: false | { blur: number; opacity?: number | undefined; position?: [x: number, y: number, z: number] | undefined; } | undefined,
+    environment: "sunset" | "dawn" | "night" | "warehouse" | "forest" | "apartment" | "studio" | "city" | "park" | "lobby" | null | undefined,
+    preset:  "rembrandt" | "portrait" | "upfront" | "soft" | undefined,
+    intensity: number | undefined,
+}
+
 export default function Viewer({shadows, contactShadow, environment, preset, intensity}: any) {
     const scene = useStore((store: any) => store.scene)
     const ref: React.MutableRefObject<any> = useRef()
