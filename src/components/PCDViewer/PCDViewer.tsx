@@ -41,6 +41,7 @@ const PCDViewer: React.FC<PCDViewerProps> = ({ file }) => {
           sizeAttenuation={true}
           alphaTest={0.5}
           transparent={true}
+          color={0x0000ff}
         />
       </points>
       )}

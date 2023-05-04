@@ -5,3 +5,7 @@
 ```
 yarn start
 ```
+
+## Screenshot
+
+![screenshot](assets/screenshot.png)
